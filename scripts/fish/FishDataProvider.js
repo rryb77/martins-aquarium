@@ -5,22 +5,30 @@ const fishCollection = [
     {
         name: "Flounder",
         species: "Flounder",
-        length: "6 inches",
+        length: 2,
         location: "Disney World",
-        food: "Guppy Food"        
-    }
+        food: "Guppy Food",
+        image: "flounder.png"     
+    },
     {
         name: "Blinky",
         species: "Uknown",
-        length: "3 feet",
+        length: 78,
         location: "Nuclear Pond",
-        food: "Souls"        
-    }
+        food: "Souls",
+        image: "blinky.jpg"
+    },
     {
         name: "Rainbow Fish",
         species: "Fictional",
-        length: "2 1/2 Feet",
+        length: 7,
         location: "Library",
-        food: "Colors"        
+        food: "Colors",
+        image: "rainbowfish.jpg"       
     }
 ]
+
+// Take the array above and slice (copy) it into a new array to preserve the original
+export const useFish = () => {
+    return fishCollection.slice()
+}
