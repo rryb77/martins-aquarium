@@ -4,6 +4,7 @@ header {
     position: sticky;
     top: 0px;
     background-color: white;
+    margin-bottom: 10px;
 }
 
 .logo {
@@ -17,7 +18,6 @@ header {
 
 .fishList {
     border: 3px solid black;
-    font-family: ;
     background-color: seashell;
 }
 
@@ -52,7 +52,7 @@ header {
 }
 
 .container--left article {
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
 }
 
 .container--left article section {
