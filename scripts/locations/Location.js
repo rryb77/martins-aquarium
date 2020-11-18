@@ -3,13 +3,11 @@
  */
 export const Location = (location) => {
     return `
-        <section class="fish card">
-            <div><img  class="fish__image image--card" src="${fish.image}" /></div>
-            <div class="fish__name">${fish.name}</div>
-            <div class="fish__species">${fish.species}</div>
-            <div class="fish__length">${fish.length}</div>
-            <div class="fish__location">${fish.location}</div>
-            <div class="fish__diet">${fish.food}</div>
+        <section class="location">
+            <div class="location__image"><img src="/images/${location.image}" alt=""></div>
+            <div class="location__name">${location.name}</div>
+            <div class="location__url"><a href="${location.url}">Link</a></div>
+            <div class="location__description">${location.description}</div>
         </section>
     `
 }
