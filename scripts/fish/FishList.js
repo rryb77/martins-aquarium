@@ -1,6 +1,9 @@
 // importing the methods used
 import { useFish } from './FishDataProvider.js'
 import { Fish } from './Fish.js'
+import { mostHolyFish } from './FishDataProvider.js'
+import { soldierFish } from './FishDataProvider.js'
+import { nonHolyFish } from './FishDataProvider.js'
 
 // export to main.js to get everything started
 export const FishList = () => {
@@ -9,21 +12,22 @@ export const FishList = () => {
     const contentElement = document.querySelector(".fishList")
     
     // call useFish and store results in a variable
-    const fishes = useFish()
+    const holyFish = mostHolyFish()
+    const soliders = soldierFish()
+    const losers = nonHolyFish()
 
-    // Generate all of the HTML for all of the fish
-    let fishHTMLRepresentations = ""
-    
+     
     // Loop through the array to add all the individual fish via Fish()
-    for (const fish of fishes) {
-       fishHTMLRepresentations += Fish(fish)
-
+    for (const fishObject of holyFish) {
+        const fishHTML = Fish(fishObject)
+        contentElement.innerHTML += fishHTML
     }
-
-    // Add a section, and all of the fish to the DOM
-    contentElement.innerHTML += `
-        <article class="fishList">
-            ${fishHTMLRepresentations}
-        </article>
-    `
+    for (const fishObject of soliders) {
+        const fishHTML = Fish(fishObject)
+        contentElement.innerHTML += fishHTML
+    }
+    for (const fishObject of losers) {
+        const fishHTML = Fish(fishObject)
+        contentElement.innerHTML += fishHTML
+    }
 }
